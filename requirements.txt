@@ -1,0 +1,7 @@
+pytest==9.2.0
+PyYAML
+requests
+pyparsing==3.3.3
+openpyxl
+bandit==1.9.4
+semgrep==1.185.0
