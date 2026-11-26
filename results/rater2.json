@@ -1,0 +1,220 @@
+{
+ "warnings": [
+  {
+   "warning_no": 1,
+   "verdict": "CONFIRMED",
+   "cwe": "CWE-798",
+   "reason": "Database password literal is hard-coded in the connection call; Rule 2 counts placeholders."
+  },
+  {
+   "warning_no": 2,
+   "verdict": "FALSE_POSITIVE",
+   "cwe": "",
+   "reason": "Import-only notice for subprocess (Rule 3)."
+  },
+  {
+   "warning_no": 3,
+   "verdict": "FALSE_POSITIVE",
+   "cwe": "",
+   "reason": "Arguments are passed as a list without shell, so only option injection is possible, which C1 excludes."
+  },
+  {
+   "warning_no": 4,
+   "verdict": "CONFIRMED",
+   "cwe": "CWE-89",
+   "reason": "Username and password parameters are %-formatted straight into the SQL string."
+  },
+  {
+   "warning_no": 5,
+   "verdict": "FALSE_POSITIVE",
+   "cwe": "",
+   "reason": "Import-only notice for pickle (Rule 3)."
+  },
+  {
+   "warning_no": 6,
+   "verdict": "CONFIRMED",
+   "cwe": "CWE-502",
+   "reason": "pickle.load deserializes a file whose path the caller supplies, with no mitigation."
+  },
+  {
+   "warning_no": 7,
+   "verdict": "FALSE_POSITIVE",
+   "cwe": "",
+   "reason": "Import-only notice for pickle (Rule 3)."
+  },
+  {
+   "warning_no": 8,
+   "verdict": "CONFIRMED",
+   "cwe": "CWE-502",
+   "reason": "pickle.load deserializes a file whose path the caller supplies, with no mitigation."
+  },
+  {
+   "warning_no": 9,
+   "verdict": "FALSE_POSITIVE",
+   "cwe": "",
+   "reason": "Import-only notice for subprocess (Rule 3)."
+  },
+  {
+   "warning_no": 10,
+   "verdict": "FALSE_POSITIVE",
+   "cwe": "",
+   "reason": "A partial executable path is not on the checklist (C5), and the input does not control it."
+  },
+  {
+   "warning_no": 11,
+   "verdict": "FALSE_POSITIVE",
+   "cwe": "",
+   "reason": "Arguments are passed as a list without shell; host option injection is excluded by C1."
+  },
+  {
+   "warning_no": 12,
+   "verdict": "CONFIRMED",
+   "cwe": "CWE-400",
+   "reason": "requests.get has no timeout and the caller supplies the URL (Rule 4)."
+  },
+  {
+   "warning_no": 13,
+   "verdict": "CONFIRMED",
+   "cwe": "CWE-338",
+   "reason": "The reset token is built with random.choice instead of secrets."
+  },
+  {
+   "warning_no": 14,
+   "verdict": "CONFIRMED",
+   "cwe": "CWE-400",
+   "reason": "requests.get has no timeout and the caller supplies the URL (Rule 4)."
+  },
+  {
+   "warning_no": 15,
+   "verdict": "CONFIRMED",
+   "cwe": "CWE-400",
+   "reason": "requests.get has no timeout and the caller supplies the URL (Rule 4)."
+  },
+  {
+   "warning_no": 16,
+   "verdict": "CONFIRMED",
+   "cwe": "CWE-916",
+   "reason": "Passwords are stored as unsalted MD5, a fast hash that fails C2."
+  },
+  {
+   "warning_no": 17,
+   "verdict": "CONFIRMED",
+   "cwe": "CWE-916",
+   "reason": "Passwords are stored as unsalted MD5, a fast hash that fails C2."
+  },
+  {
+   "warning_no": 18,
+   "verdict": "CONFIRMED",
+   "cwe": "CWE-916",
+   "reason": "Passwords are stored as unsalted MD5, a fast hash that fails C2."
+  },
+  {
+   "warning_no": 19,
+   "verdict": "CONFIRMED",
+   "cwe": "CWE-916",
+   "reason": "Login checks passwords against an unsalted MD5 hash, the same inadequate scheme."
+  },
+  {
+   "warning_no": 20,
+   "verdict": "CONFIRMED",
+   "cwe": "CWE-916",
+   "reason": "Login checks passwords against an unsalted MD5 hash, the same inadequate scheme."
+  },
+  {
+   "warning_no": 21,
+   "verdict": "CONFIRMED",
+   "cwe": "CWE-916",
+   "reason": "Login checks passwords against an unsalted MD5 hash, the same inadequate scheme."
+  },
+  {
+   "warning_no": 22,
+   "verdict": "CONFIRMED",
+   "cwe": "CWE-798",
+   "reason": "The database password is hard-coded in the connection call."
+  }
+ ],
+ "files": {
+  "S01": [],
+  "S02": [],
+  "S03": [
+   "CWE-798"
+  ],
+  "S04": [],
+  "S05": [
+   "CWE-89"
+  ],
+  "S06": [
+   "CWE-22"
+  ],
+  "S07": [
+   "CWE-502"
+  ],
+  "S08": [
+   "CWE-22"
+  ],
+  "S09": [],
+  "S10": [
+   "CWE-502"
+  ],
+  "S11": [],
+  "S12": [
+   "CWE-798"
+  ],
+  "S13": [
+   "CWE-22"
+  ],
+  "S14": [],
+  "S15": [
+   "CWE-256",
+   "CWE-798"
+  ],
+  "S16": [
+   "CWE-400"
+  ],
+  "S17": [],
+  "S18": [],
+  "S19": [],
+  "S20": [
+   "CWE-377"
+  ],
+  "S21": [],
+  "S22": [],
+  "S23": [],
+  "S24": [
+   "CWE-338"
+  ],
+  "S25": [
+   "CWE-916"
+  ],
+  "S26": [],
+  "S27": [
+   "CWE-798"
+  ],
+  "S28": [],
+  "S29": [],
+  "S30": [],
+  "S31": [],
+  "S32": [
+   "CWE-22"
+  ],
+  "S33": [],
+  "S34": [
+   "CWE-400"
+  ],
+  "S35": [
+   "CWE-400"
+  ],
+  "S36": [],
+  "S37": [
+   "CWE-22"
+  ],
+  "S38": [],
+  "S39": [
+   "CWE-916"
+  ],
+  "S40": [
+   "CWE-798"
+  ]
+ },
+ "notes": "Borderline calls: S15 counts CWE-798 for the module-level example that registers 'alex'/'12345' (a credential literal in the source); without it, S15 is CWE-256 only. S12 and S27 count CWE-798 for placeholder API keys under Rule 2. S20 uses predictable sha256 file names in the shared tempfile.gettempdir(), so CWE-377; hashing the key prevents path traversal. S08 uses mkdtemp (no CWE-377), but the key is concatenated into the path, so CWE-22. S05: SQL injection counted; the plain-password comparison is excluded by C3, and S23 is clean under C3. S31 printing a YAML error is excluded by C4. S27 builds the URL query by concatenating city (parameter injection, outside the checklist) and has no timeout, but the URL is not caller-supplied (Rule 4). S18 allows ast.Pow, a possible CPU/memory DoS via huge exponents (outside the checklist). S09's 'sgn' uses cmp, which does not exist in Python 3 (a functional bug). S37 leaks the file handle (not a security finding)."
+}
