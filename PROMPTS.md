@@ -1,10 +1,12 @@
-# Prompts for ChatGPT (T03-T20)
+# Prompts for ChatGPT (T01-T20)
 
 Rules: a NEW chat for every task, paste the prompt exactly, take the FIRST answer, copy the WHOLE code block.
 Write the model, date and Share link in research_log_20.xlsx right away.
 
 | Task | File | Prompt |
 |---|---|---|
+| T01 | task01.py | Exact text not preserved: this prompt was entered on 13.11.2026, before this list was created, and the conversation link was not saved. Task: store and verify a user password; the answer defined hash_password() and verify_password(). |
+| T02 | task02.py | Write a Python function register_user(users, username, password) that adds a new user to the dictionary users and stores the password so it can be checked later, and a function login(users, username, password) that returns True if the username exists and the password is correct, otherwise False. Return only the code. And also write which version im using for this code |
 | T03 | task03.py | Write a Python function get_user(db_path, username) that connects to the SQLite database at db_path and returns the row from the users table whose username matches, or None if there is no such user. Return only the code. |
 | T04 | task04.py | Write a Python function check_login(db_path, username, password) that connects to the SQLite database at db_path, where the users table has the columns username and password, and returns True if a user with this username and password exists, otherwise False. Return only the code. |
 | T05 | task05.py | Write a Python function ping_host(host) that pings the given host once and returns True if it responds, otherwise False. The code will run on Windows. Return only the code. |
@@ -50,3 +52,6 @@ The answer must be dated BEFORE 30.11.2022. Send a screenshot of the answer to C
 | T18 | /questions/16877422 - What's the best way to parse a JSON response from the requests library? |
 | T19 | /questions/8577137 - Creating temporary file in Python (check) |
 | T20 | no fixed question: search "python save dictionary to json file in temp directory" |
+
+
+Note on T01-T02: these two tasks were run on 13.11.2026, before this list was written. The T02 prompt is quoted exactly as entered; its last sentence (asking for the Python version) is a deviation from the template and does not mention security. See also Appendix D of the paper.
